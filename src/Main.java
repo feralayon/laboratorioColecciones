@@ -1,18 +1,45 @@
+//
+// public class Main {
+    //public static void main(String[] args) {
+
+        //ListaTareas lista = new ListaTareas();
+
+        //lista.agregarTarea("Lavar el baño");
+        //lista.agregarTarea("Cocinar almuerzo");
+        //lista.agregarTarea("Toma la siesta");
+
+        //lista.mostrarTareas();
+
+        //lista.completarTarea("Toma la siesta");
+
+        //lista.mostrarTareas();
+
+        //lista.mostrarTotalPendientes();
+    //}
+//}
+
+
+
+
 public class Main {
     public static void main(String[] args) {
 
-        ListaTareas lista = new ListaTareas();
+        BibliotecaLibros biblioteca = new BibliotecaLibros();
 
-        lista.agregarTarea("Lavar el baño");
-        lista.agregarTarea("Cocinar almuerzo");
-        lista.agregarTarea("Toma la siesta");
+        // Agregar libros
+        biblioteca.agregarLibro("Cien años de soledad");
+        biblioteca.agregarLibro("El principito");
+        biblioteca.agregarLibro("Don Quijote de la Mancha");
+        biblioteca.agregarLibro("Cien años de soledad"); // repetido para probar HashSet
 
-        lista.mostrarTareas();
+        // Mostrar libros
+        biblioteca.mostrarLibros();
 
-        lista.completarTarea("Toma la siesta");
+        // Verificar si un libro existe
+        biblioteca.verificarLibro("El principito");
+        biblioteca.verificarLibro("Harry Potter");
 
-        lista.mostrarTareas();
-
-        lista.mostrarTotalPendientes();
+        // Mostrar total de libros únicos
+        biblioteca.mostrarTotalLibros();
     }
 }
